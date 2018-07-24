@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>learn webpack config</title>
+	<style>
+		#root{
+			width: 800px;
+			margin: 0 auto;
+			background: #eee;
+			padding: 10px;
+		}
+		p{
+			font-size: 14px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id='root'>
+			<h2>这是index.html(非导入)</h2>
+			<p>引用了dist/main.js,webpack4+版本需要安装webpack-cli或其他，并不能控制台指定打包后的文件及文件名，</p>
+			<p>默认入口为 根目录src/index.js  默认 导出dist/main.js </p>
+			<p> 运行的是webpack --mode development[production]可直接打包</p>
+			<p>非全局webpack和webpack-cli 输入 node_modules/.bin/webpack --mode development</p>
+			<hr>
+			<div id="summary">
+				<h2>总结</h2>
+				<div>
+					<p>1、webpack-cli必须要全局安装，否则不能使用webpack指令； 
+					</p>
+					<p>
+						2、webpack也必须要全局安装，否则也不能使用webpack指令。 (实际上可以运行 加上node_modules/.bin/webpack)
+					</p>
+					<p>
+						3、webpack4.x中webpack.config.js这样的配置文件不是必须的。  
+					</p>
+					<p>
+						4、默认入口文件是./src/index.js，默认输出文件./dist/main.js。
+					</p>
+				</div>
+			</div>
+			<hr>
+			<div id="config">
+				<h2>webpack config</h2>
+				<div>
+					<p>1、创建工程目录； </p>
+					<p>2、初始化工程目录：npm init。 </p>
+					<p>3、全局安装webpack-cli。</p>
+					<p>4、全局安装webpack。 </p>
+					<p>5、webpack –mode development/production进行打包，可在package.json中配置dev和build的脚本，便只需运行npm run dev/build，作用相同。 </p>
+					<p>6、在webpack –mode development/production可串联设置其他参数。</p>
+				</div>
+			</div>
+	</div>
+</body>
+<script type="text/javascript" src="./../dist/main.js"></script>
+</html>
